@@ -4,22 +4,32 @@ h2 {
   color: blueviolet;
 }
 
+/** Ini adalah contoh dari grup selektor CSS, di mana Anda memilih beberapa elemen dan menerapkan properti styling yang sama pada semua elemen tersebut. Dalam kasus ini, elemen h1 dan h2 akan memiliki warna teks yang sama, yaitu "blueviolet." */
+
 /* Child */
 .box > p {
   color: firebrick;
 }
+
+/** Ini adalah contoh dari selektor anak, di mana Anda memilih elemen <p> yang merupakan anak langsung dari elemen dengan class .box. Properti yang diterapkan di sini adalah warna teks "firebrick." */
 
 /* Descendent */
 .box li {
   color: blue;
 }
 
+/** Ini adalah contoh dari selektor keturunan, di mana Anda memilih semua elemen <li> yang berada dalam elemen dengan class .box. Properti yang diterapkan adalah warna teks "blue." */
+
 /* Chained */
 li.done {
   color: green;
 }
 
+/** Ini adalah contoh dari selektor keturunan, di mana Anda memilih semua elemen <li> yang berada dalam elemen dengan class .box. Properti yang diterapkan adalah warna teks "blue." */
+
 /* Multiple Combiners */
 ul p.done {
   font-size: 0.5rem;
 }
+
+/** Ini adalah contoh dari selektor keturunan, di mana Anda memilih semua elemen <li> yang berada dalam elemen dengan class .box. Properti yang diterapkan adalah warna teks "blue." */
