@@ -1,1 +1,23 @@
 /* Write your code here: */
+
+h1,
+h2 {
+  color: blueviolet;
+}
+
+.box {
+  color: green;
+}
+
+p.done {
+  color: brown;
+}
+
+ul.list li:first-child {
+  color: blue;
+}
+
+ul p.done {
+  color: black;
+  font-size: 0.5rem;
+}
