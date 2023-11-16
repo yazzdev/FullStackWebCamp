@@ -7,13 +7,94 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Mengatur font untuk seluruh halaman */
     body {
       font-family: 'Sono', sans-serif;
     }
 
-    /* Hint: What can you do with a media query and flexbox? */
-    @media (max-width: 1250px) {
-      
+    /* Container utama menggunakan flexbox */
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 30px;
+      min-height: 90vh;
+      flex-wrap: wrap;
+      /* Membungkus item flex ke baris berikutnya jika tidak cukup ruang */
+    }
+
+    /* Gaya dasar untuk setiap plan */
+    .pricing-plan {
+      background-color: gainsboro;
+      max-width: 500px;
+      min-width: 350px;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+      /* Efek transisi untuk hilangnya bayangan saat di-hover */
+    }
+
+    /* Menghilangkan bayangan saat di-hover */
+    .pricing-plan:hover {
+      box-shadow: none;
+    }
+
+    /* Gaya untuk judul plan */
+    .plan-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    /* Gaya untuk harga plan */
+    .plan-price {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    /* Gaya untuk fitur plan */
+    .plan-features {
+      font-size: 1.1rem;
+    }
+
+    /* Gaya untuk tombol plan */
+    .plan-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+      background-color: grey;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Efek transisi untuk warna tombol saat di-hover */
+    }
+
+    /* Mengubah warna tombol saat di-hover dan menambahkan bayangan */
+    .plan-button:hover {
+      background-color: white;
+      color: grey;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+      /* Efek transisi untuk bayangan tombol saat di-hover */
+    }
+
+    /* Media query untuk responsifitas pada layar berukuran kecil (maksimal 768px) */
+    @media (max-width: 768px) {
+      .pricing-container {
+        flex-direction: column;
+        /* Merubah susunan menjadi kolom pada layar berukuran kecil */
+      }
+
+      .pricing-plan {
+        max-width: 100%;
+        /* Mengisi lebar layar penuh pada perangkat mobile */
+      }
     }
   </style>
 </head>
@@ -23,31 +104,33 @@
     <div class="pricing-plan">
       <div class="plan-title">Basic</div>
       <div class="plan-price">$9.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 10GB Storage</li>
-        <li>✅ 1 User</li>
-        <li>🚫 Support</li>
-      </ul>
+      <div class="plan-features">
+        <p>✅ 10GB Storage<br>
+          ✅ 1 User<br>
+          🚫 Support</p>
+      </div>
       <button class="plan-button">Sign Up</a>
     </div>
+
     <div class="pricing-plan">
       <div class="plan-title">Standard</div>
       <div class="plan-price">$19.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 50GB Storage</li>
-        <li>✅ 5 Users</li>
-        <li>✅ Phone &amp; Email Support</li>
-      </ul>
+      <div class="plan-features">
+        <p>✅ 50GB Storage<br>
+          ✅ 5 Users<br>
+          ✅ Phone &amp; Email Support</p>
+      </div>
       <button class="plan-button">Sign Up</a>
     </div>
+
     <div class="pricing-plan">
       <div class="plan-title">Premium</div>
       <div class="plan-price">$49.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 100GB Storage</li>
-        <li>✅ 10 Users</li>
-        <li>✅ 24/7 Support</li>
-      </ul>
+      <div class="plan-features">
+        <p>✅ 100GB Storage<br>
+          ✅ 10 Users<br>
+          ✅ 24/7 Support</p>
+      </div>
       <button class="plan-button">Sign Up</a>
     </div>
   </div>
